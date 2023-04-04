@@ -1,2 +1,2 @@
 # mainwebproj
-app for TTS and STT communication through a chatbox
+webapp for TTS and STT communication through a chatbox
