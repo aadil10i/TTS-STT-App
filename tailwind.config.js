@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'body': 'interfaces', 
+      },
       colors: {
         'sidebar': '#1f2029',
       },

@@ -11,9 +11,9 @@ function ChatSidebar() {
         <div className="flex h-full flex-col min-h-screen items-stretch p-2">
           <div
             href="/"
-            className="text-white flex items-center gap-3 rounded border border-white/20 p-3 transition-colors hover:bg-gray-500/10"
-          >
-            + New chat
+            className="text-white font-sans font-semibold flex items-center gap-3 rounded border-2 border-white/20 p-2 transition-colors hover:bg-gray-500/10">
+           <span className="pl-1 pr-1 font-bold ">+</span> 
+            New chat
           </div>
   
           <div className="flex-grow">
