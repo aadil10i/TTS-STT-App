@@ -1,18 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       fontFamily: {
-        'body': 'interfaces', 
+        body: ['Montserrat', 'sans-serif'],
       },
+
       colors: {
-        'sidebar': '#1f2029',
+        sidebar: '#0C0A09',
       },
     },
   },
   plugins: [],
-}
+};

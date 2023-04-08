@@ -1,17 +1,21 @@
-// import Link from "next/link"
-import React from "react"
-import ChatInput from "./input/ChatInput";
+import React, { useState } from 'react';
+import Chatbar from './Chatbar';
+import Chatlog from './Chatlog';
 
-function ChatBar() {
-    // const { clearConversations } = useOpenAI();
-    return (
-      <div className="ChatBox">
-        <div className="ChatInput"></div>
-        <ChatInput/>
-      </div>
-    );
-  }
-  
-  export default ChatBar;
-  
-  
+function Chat() {
+  const [messages, setMessages] = useState([]);
+
+  const handleSubmit = (message) => {
+    // Add the message to the messages array
+    setMessages([...messages, message]);
+  };
+
+  return (
+    <div className="chat">
+      <Chatlog messages={messages} />
+      <Chatbar onSubmit={handleSubmit} />
+    </div>
+  );
+}
+
+export default Chat;
