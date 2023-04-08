@@ -3,7 +3,6 @@
 // import viteLogo from '/vite.svg'
 import ChatSidebar from '../components/sidebar/sidebar.jsx';
 import Chat from '../components/Chat/Chat.jsx';
-import '../styles/main.css';
 
 function Main() {
   return (

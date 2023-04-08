@@ -7,7 +7,7 @@ import Conversations from './conversation/Conversations.jsx';
 function ChatSidebar() {
   // const { clearConversations } = useOpenAI();
   return (
-    <div className="fixed left-0 top-0 h-min w-56 bg-sidebar">
+    <div className="fixed left-0 top-0 h-min w-56 bg-sidebar bg-hero-pattern">
       <div className="flex h-full min-h-screen flex-col items-stretch p-2">
         <div
           href="/"

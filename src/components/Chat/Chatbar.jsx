@@ -24,7 +24,7 @@ function Chatbar() {
   return (
     <div className="chat-input-holder">
       <form
-        className="fixed bottom-0 left-0 right-0 p-6"
+        className="fixed bottom-0 left-0 right-0 p-6 text-center"
         onSubmit={handleSubmit}
       >
         <textarea

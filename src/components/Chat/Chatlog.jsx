@@ -9,7 +9,7 @@ function Chatlog(props) {
         <div key={index} className={`chat-${message.sender}`}>
           <div className="">
             <div className="chat-message-center">
-              <div className=" ml-auto mr-auto flex max-w-3xl bg-neutral-950  p-3 pl-6 pr-6 shadow-[0_0_8px_0_rgb(0,0,0,0.45)] ">
+              <div className=" max-w-screen-3xl ml-auto mr-auto flex bg-neutral-950 p-3 pl-96  pr-6 shadow-[0_0_8px_0_rgb(0,0,0,0.45)] ">
                 <div className="avatar">
                   <div className="h-10 w-10 rounded-full font-body text-base font-bold text-white">
                     {message.sender === 'student' ? 'You' : 'Teacher'}:
