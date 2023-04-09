@@ -29,7 +29,7 @@ function Login() {
     <div className="login-container">
       <div className="card-front">
         <div className="center-wrap">
-          <h4 className="mb-4 pb-3 text-xl">Log In</h4>
+          <h4 className="mb-4 pb-3 text-2xl">Log In</h4>
           <form id="login-form" onSubmit={handleSubmit}>
             <div className="form-group">
               <input

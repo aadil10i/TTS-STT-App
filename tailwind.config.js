@@ -11,6 +11,7 @@ export default {
 
       fontFamily: {
         body: ['Montserrat', 'sans-serif'],
+        pop: ['poppins', 'sans-serif'],
       },
       colors: {
         sidebar: '#0C0A09',
