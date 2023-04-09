@@ -52,3 +52,5 @@ export async function addMessage(message) {
     console.error('Error adding message to Firestore:', error);
   }
 }
+
+export { signIn };
