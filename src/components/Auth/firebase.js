@@ -1,9 +1,11 @@
 console.log('JS file loaded');
 
 // import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
+import { getDatabase, ref, onValue } from 'firebase/database';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyCGodZfViOXriCKy_e-Cv5nKhA324aFHPM',
@@ -17,6 +19,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const firestore = getFirestore(app);
+const database = getDatabase(app);
 
 // Sign in function
 async function signIn(email, password) {
@@ -33,15 +36,6 @@ async function signIn(email, password) {
   }
 }
 
-// Add event listener for form submission
-// document.getElementById('login-form').addEventListener('submit', (event) => {
-//   console.log('submit button clicked');
-//   event.preventDefault();
-//   const email = document.getElementById('logemail').value;
-//   const password = document.getElementById('logpass').value;
-//   signIn(email, password);
-// });
-
 const messagesRef = collection(firestore, 'messages');
 
 export async function addMessage(message) {
@@ -53,4 +47,31 @@ export async function addMessage(message) {
   }
 }
 
-export { signIn };
+function useTeacherSpeech() {
+  const [teacherSpeech, setTeacherSpeech] = useState(null);
+  const [previousTeacherSpeech, setPreviousTeacherSpeech] = useState(null);
+
+  function listenForTeacherResponse() {
+    const speechRef = ref(database, 'Speech');
+
+    onValue(speechRef, (snapshot) => {
+      const data = snapshot.val();
+      console.log('Teacher response:', data);
+
+      if (data) {
+        setTeacherSpeech(data);
+        setPreviousTeacherSpeech(data);
+      } else {
+        setTeacherSpeech(null);
+      }
+    });
+  }
+
+  useEffect(() => {
+    listenForTeacherResponse();
+  }, []);
+
+  return [teacherSpeech, previousTeacherSpeech];
+}
+
+export { signIn, useTeacherSpeech };

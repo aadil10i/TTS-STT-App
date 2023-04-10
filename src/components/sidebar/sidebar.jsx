@@ -7,7 +7,7 @@ import Conversations from './conversation/Conversations.jsx';
 function ChatSidebar() {
   // const { clearConversations } = useOpenAI();
   return (
-    <div className="fixed left-0 top-0 h-min w-56 bg-sidebar bg-hero-pattern">
+    <div className=" fixed left-0 top-0 h-min w-52 bg-sidebar2 bg-hero-pattern bg-cover bg-center bg-no-repeat">
       <div className="flex h-full min-h-screen flex-col items-stretch p-2">
         <div
           href="/"
@@ -21,11 +21,13 @@ function ChatSidebar() {
           <Conversations />
         </div>
 
-        <div className="flex flex-col py-12">
+        <div className="flex flex-col">
           <div className="flex flex-col gap-y-2 border-b border-white/10"></div>
           <ButtonContainer>
             <MdDeleteOutline className="text-white" />
-            <h1 className="font-body text-white ">Clear Conversation</h1>
+            <h1 className="font-body text-lg text-white ">
+              Clear Conversation
+            </h1>
           </ButtonContainer>
         </div>
       </div>

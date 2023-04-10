@@ -1,11 +1,23 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-// import Login from './pages/login.jsx';
-import Main from './pages/main.jsx'; // main components of page (text)
-import './styles/index.css'; // background css
+import ReactDOM from 'react-dom';
+import './styles/index.css';
+import App from './app';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.render(
   <React.StrictMode>
-    <Main />
+    <App />
   </React.StrictMode>,
+  document.getElementById('root'),
 );
+
+// import React from 'react';
+// import { createRoot } from 'react-dom/client';
+// import App from './app';
+// import './styles/index.css';
+
+// const root = document.getElementById('root');
+// createRoot(root).render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>,
+// );

@@ -15,6 +15,7 @@ export default {
       },
       colors: {
         sidebar: '#0C0A09',
+        sidebar2: '#0A0A0A',
       },
     },
   },
