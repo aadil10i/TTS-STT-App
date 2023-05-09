@@ -1,4 +1,4 @@
-import { useTeacherSpeech } from '../Auth/firebase';
+// import { useTeacherSpeech } from '../Auth/firebase';
 import { useEffect, useRef, useState } from 'react';
 
 function Chatlog(props) {
