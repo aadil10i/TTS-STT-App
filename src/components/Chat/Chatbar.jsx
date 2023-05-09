@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { MdSend } from 'react-icons/md';
 import Chatlog from './Chatlog';
-import { addMessage } from '../Auth/firebase';
+// import { addMessage } from '../Auth/firebase';
 
 function Chatbar() {
   const [input, setInput] = useState('');
