@@ -1,6 +1,6 @@
-# A Text-to-Speech & Speech-To-Text application that utilizes a microphone and an Arduino UNO
+# TTS-STT-App
 
-app for TTS and STT communication through a chatbox
+A Text-to-Speech & Speech-To-Text Chatroom that utilizes a microphone and an Arduino UNO
 
 # About this project
 
