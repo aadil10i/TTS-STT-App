@@ -6,11 +6,11 @@ import json
 from firebase_admin import credentials
 from firebase_admin import db
 import firebase_admin
-auth_key = '4153db18e7c5402f9a3f4fc4594ec1f3'
+auth_key = ''
 
-cred = credentials.Certificate('website-pde2101-firebase-adminsdk-jrepn-1483e61246.json')
+cred = credentials.Certificate('')
 firebase_admin.initialize_app(cred, {
-    'databaseURL':  'https://website-pde2101-default-rtdb.firebaseio.com/'
+    'databaseURL':  ''
 })
 
 node_ref = db.reference().child('Speech')
